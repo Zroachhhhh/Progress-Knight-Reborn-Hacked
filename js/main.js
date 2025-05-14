@@ -64,8 +64,8 @@ const jobBaseData = {
     "Mage": {name: "Mage", maxXp: 10000000, income: 7500},
     "Wizard": {name: "Wizard", maxXp: 100000000, income: 50000},
     "Master wizard": {name: "Master wizard", maxXp: 10000000000, income: 250000},
-    "Chairman": {name: "Chairman", maxXp: 1000000000000, income: 1000000},
-    "Illustrious Chairman": {name: "Illustrious Chairman", maxXp: 7000000000000, income: 1500000},
+    "Chairman": {name: "Chairman", maxXp: 1, income: 1000000},
+    "Illustrious Chairman": {name: "Illustrious Chairman", maxXp: 1, income: 1500000},
 
     "Junior Caretaker": {name: "Junior Caretaker", maxXp: 100000, income: 15},
     "Lead Caretaker": {name: "Lead Caretaker", maxXp: 1000000, income: 115}, 
@@ -75,18 +75,18 @@ const jobBaseData = {
     "Senior": {name: "Senior", maxXp: 64000000, income: 2000}, 
     "Probation": {name: "Probation", maxXp: 300000000, income: 12000},
 
-    "Baronet": {name: "Baronet", maxXp: 7500000, income: 3500},
-    "Baron": {name: "Baron", maxXp: 40000000, income: 4500},
-    "Vice Count": {name: "Vice Count", maxXp: 160000000, income: 6000},
-    "Count": {name: "Count", maxXp: 640000000, income: 8000},
-    "Duke": {name: "Duke", maxXp: 2400000000, income: 25000},
-    "Grand Duke": {name: "Grand Duke", maxXp: 9600000000, income: 40000},
-    "Arch Duke": {name: "Arch Duke", maxXp: 40000000000, income: 55000},
-    "Lord": {name: "Lord", maxXp: 160000000000, income: 150000},
-    "High Lord": {name: "High Lord", maxXp: 160000000000000, income: 300000},
-    "King": {name: "King", maxXp: 160000000000000, income: 300000},
-    "High King": {name: "High King", maxXp: 160000000000000, income: 1200000},
-    "Emperor of Mankind": {name: "Emperor of Mankind", maxXp: 160000000000000, income: 2500000},
+    "Baronet": {name: "Baronet", maxXp: 1, income: 3500},
+    "Baron": {name: "Baron", maxXp: 1, income: 4500},
+    "Vice Count": {name: "Vice Count", maxXp: 1, income: 6000},
+    "Count": {name: "Count", maxXp: 1, income: 8000},
+    "Duke": {name: "Duke", maxXp: 1, income: 25000},
+    "Grand Duke": {name: "Grand Duke", maxXp: 1, income: 40000},
+    "Arch Duke": {name: "Arch Duke", maxXp: 1, income: 55000},
+    "Lord": {name: "Lord", maxXp: 1, income: 150000},
+    "High Lord": {name: "High Lord", maxXp: 1, income: 300000},
+    "King": {name: "King", maxXp: 1, income: 300000},
+    "High King": {name: "High King", maxXp: 1, income: 1200000},
+    "Emperor of Mankind": {name: "Emperor of Mankind", maxXp: 1, income: 2500000},
 
 }
 
@@ -105,18 +105,18 @@ const skillBaseData = {
     
     //Magic
     "Mana control": {name: "Mana control", maxXp: 100, effect: baseEffect, description: "T.A.A. xp"},
-    "Immortality": {name: "Immortality", maxXp: 100, effect: 0.01, description: "Longer lifespan"},
-    "Time warping": {name: "Time warping", maxXp: 100, effect: 0.01, description: "Gamespeed"},
+    "Immortality": {name: "Immortality", maxXp: 1, effect: 10.0, description: "Longer lifespan"},
+    "Time warping": {name: "Time warping", maxXp: 1, effect: 0.1, description: "Gamespeed"},
     "Super immortality": {name: "Super immortality", maxXp: 100, effect: 0.01, description: "Longer lifespan"},
 
     //Mind
     "Novel Knowledge": {name: "Novel Knowledge", maxXp: 100, effect: 0.01, description: "Discovery xp"},
     "Unusual Insight": {name: "Unusual Insight", maxXp: 100, effect: 0.005, description: "Magical xp"},
-    "Trade Psychology": {name: "Trade Psychology", maxXp: 100, effect: 0.80, description: "Merchant pay"},
-    "Flow": {name: "Flow", maxXp: 800, effect: 0.001, description: "Gamespeed"},
-    "Magical Engineering": {name: "Magical Engineering", maxXp: 1000, effect: 0.01, description: "Chairman xp"},
+    "Trade Psychology": {name: "Trade Psychology", maxXp: 100, effect: 500.0, description: "Merchant pay"},
+    "Flow": {name: "Flow", maxXp: 1, effect: 0.1, description: "Gamespeed"},
+    "Magical Engineering": {name: "Magical Engineering", maxXp: 1000, effect: 1.0, description: "Chairman xp"},
     "Scales Of Thought": {name: "Scales Of Thought", maxXp: 1100, effect: 0.003, description: "Magical xp"},
-    "Magical Biology": {name: "Magical Biology", maxXp: 1500, effect: 0.005, description: "Chairman xp"},
+    "Magical Biology": {name: "Magical Biology", maxXp: 1500, effect: 1.0, description: "Chairman xp"},
 
 
     "Dark influence": {name: "Dark influence", maxXp: 100, effect: 0.01, description: "All xp"},
@@ -141,7 +141,7 @@ const itemBaseData = {
     "Grand palace": {name: "Grand palace", expense: -190000000, effect: 135},
 
     //Cameron's first addition: rag clothing. Woohoo!
-    "Rag Clothing": {name: "Rag Clothing", expense: -3, effect: 1.5, description: "Skill xp"},
+    "Rag Clothing": {name: "Nigger", expense: -3, effect: 1.5, description: "Skill xp"},
     "Book": {name: "Book", expense: -10, effect: 1.5, description: "Skill xp"},
     "Basic Farm Tools": {name: "Basic Farm Tools", expense: -10, effect: 1.5, description: "Farm upgrade"},
     "Dumbbells": {name: "Dumbbells", expense: -50, effect: 1.5, description: "Strength xp"},
@@ -183,7 +183,7 @@ const itemCategories = {
     "Properties": ["Homeless", "Tent", "Wooden hut", "Cottage", "House", "Large house", "Small Manor", "Small palace", "Grand palace"],
     "Misc": ["Rag Clothing", "Book", "Basic Farm Tools", "Small Field", "Ox-driven Plow", "Livestock-derived Fertilizer", "Cheap Fishing Rod", "Dumbbells", "Miner's Lantern", "Crappy Anvil", "Pack Horse", "Small Shop",
     "Weapon Outlet", "Personal squire", 
-                "Steel longsword", "Butler", "Sapphire charm", "Study desk", "Library"]
+                "Steel longsword", "Nigger", "Sapphire charm", "Study desk", "Library"]
 }
 
 const headerRowColors = {
