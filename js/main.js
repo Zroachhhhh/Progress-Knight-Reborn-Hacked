@@ -140,8 +140,8 @@ const itemBaseData = {
     "Small palace": {name: "Small palace", expense: -5000000, effect: 60},
     "Grand palace": {name: "Grand palace", expense: -190000000, effect: 135},
 
-    //Cameron's first addition: rag clothing. Woohoo!
-    "Rag Clothing": {name: "Nigger", expense: -3, effect: 1.5, description: "Skill xp"},
+    //Cameron's first addition: Nigger. Woohoo!
+    "Nigger": {name: "Nigger", expense: -3, effect: 1.5, description: "Skill xp"},
     "Book": {name: "Book", expense: -10, effect: 1.5, description: "Skill xp"},
     "Basic Farm Tools": {name: "Basic Farm Tools", expense: -10, effect: 1.5, description: "Farm upgrade"},
     "Dumbbells": {name: "Dumbbells", expense: -50, effect: 1.5, description: "Strength xp"},
@@ -181,7 +181,7 @@ const skillCategories = {
 
 const itemCategories = {
     "Properties": ["Homeless", "Tent", "Wooden hut", "Cottage", "House", "Large house", "Small Manor", "Small palace", "Grand palace"],
-    "Misc": ["Rag Clothing", "Book", "Basic Farm Tools", "Small Field", "Ox-driven Plow", "Livestock-derived Fertilizer", "Cheap Fishing Rod", "Dumbbells", "Miner's Lantern", "Crappy Anvil", "Pack Horse", "Small Shop",
+    "Misc": ["Nigger", "Book", "Basic Farm Tools", "Small Field", "Ox-driven Plow", "Livestock-derived Fertilizer", "Cheap Fishing Rod", "Dumbbells", "Miner's Lantern", "Crappy Anvil", "Pack Horse", "Small Shop",
     "Weapon Outlet", "Personal squire", 
                 "Steel longsword", "Nigger", "Sapphire charm", "Study desk", "Library"]
 }
@@ -359,7 +359,7 @@ function addMultipliers() {
             task.xpMultipliers.push(getBindedItemEffect("Personal squire"))    
         } else if (task instanceof Skill) {
             task.xpMultipliers.push(getBindedTaskEffect("Concentration"))
-            task.xpMultipliers.push(getBindedItemEffect("Rag Clothing"))
+            task.xpMultipliers.push(getBindedItemEffect("Nigger"))
             task.xpMultipliers.push(getBindedItemEffect("Book"))
             task.xpMultipliers.push(getBindedItemEffect("Study desk"))
             task.xpMultipliers.push(getBindedItemEffect("Library"))
@@ -698,7 +698,7 @@ function updateRequiredRows(data, categoryType) {
         // required row display.
         if(categoryType.Misc == undefined) {
             for (i = 0; i < category.length; i++) {
-                var entityName = category[i] //first we grab the name, like "Beggar" or "Rag Clothing"
+                var entityName = category[i] //first we grab the name, like "Beggar" or "Nigger"
                 if (i >= category.length - 1) break
                 var requirements = gameData.requirements[entityName] //grab any requirements
                 if (requirements && i == 0) { //if the thing has requirements, its the first in the array, and they aren't completed, set this thing as the nextEntity
@@ -724,7 +724,7 @@ function updateRequiredRows(data, categoryType) {
     // Step two: then we'll 
     else if (categoryType.Misc != undefined) {
         for (i = 0; i < category.length; i++) {
-            var entityName = category[i]; //first we grab the name, like "Beggar" or "Rag Clothing"
+            var entityName = category[i]; //first we grab the name, like "Beggar" or "Nigger"
             if (i >= category.length - 1) break;
             var requirements = gameData.requirements[entityName]; //grab any requirements
             if (requirements && i == 0) { //if the thing has requirements, its the first in the array, and they aren't completed, set this thing as the nextEntity
@@ -1492,7 +1492,7 @@ gameData.requirements = {
 
     //Misc
     "Book": new CoinRequirement([getItemElement("Book")], [{requirement: 0}]),
-    "Rag Clothing": new CoinRequirement([getItemElement("Rag Clothing")], [{requirement: 10}]),
+    "Nigger": new CoinRequirement([getItemElement("Nigger")], [{requirement: 10}]),
     "Dumbbells": new CoinRequirement([getItemElement("Dumbbells")], [{requirement: gameData.itemData["Dumbbells"].getExpense() * 100}]),
     "Personal squire": new CoinRequirement([getItemElement("Personal squire")], [{requirement: gameData.itemData["Personal squire"].getExpense() * 100}]),
     "Steel longsword": new CoinRequirement([getItemElement("Steel longsword")], [{requirement: gameData.itemData["Steel longsword"].getExpense() * 100}]),
