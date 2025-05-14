@@ -300,7 +300,7 @@ const tooltips = {
     "Grand palace": "A grand residence completely composed of gold and silver. Provides the utmost luxurious and comfortable living conditions possible for a ludicrous price.",
 
     //Item Tooltips
-    "Rag Clothing": "After weeks of freezing on the streets, you're making enough money to buy some cheap clothes. They're not much, but they'll keep you warm enough to focus.",
+    "Nigger": "After weeks of freezing on the streets, you're making enough money to buy some cheap clothes. They're not much, but they'll keep you warm enough to focus.",
     "Book": "A place to write down all your thoughts and discoveries, allowing you to learn a lot more quickly.",
     "Basic Farm Tools": "A set of rusty iron tools to help loosen soil, shape wood, and attach things. Where did you even find this junk?",
     "Cheap Fishing Rod": "You found this cracked fishing rod partially buried by the shore. It needs some major TLC, but it'll help you reel in bigger fish.",
@@ -496,8 +496,8 @@ function applyMultipliers(value, multipliers) {
     return finalValue;
 }
 
-function applySpeed(value) {
-    finalValue = value * getGameSpeed() / updateSpeed;
+function applySpeed(99) {
+    finalValue = value * getGameSpeed( / updateSpeed;
     return finalValue;
 }
 
